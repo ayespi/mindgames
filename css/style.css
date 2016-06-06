@@ -11,12 +11,17 @@ header{background-color: #000000; color:#ffffff; height:75px; line-height:75px; 
 #content p{font-size: 28px; color: #cccccc;}
 #banner{background-color: #555555; padding:60px 20px; margin-top: 30px;}
 
+#play-area{width:960px; border:1px solid #555555;}
+
 button{width:200px; height:30px; margin-top: 15px; font-size: 18px;}
 #bt-play{background-color: green; color:#ffffff;}
 #bt-play:hover{background-color: #1bd252;}
 
 #bt-rules{background-color: #0077ff; color:#ffffff;}
 #bt-rules:hover{background-color: #53a1fa;}
+
+#bt-start{background-color: #ff0000; color:#ffffff;}
+#bt-start:hover{background-color: #ffffff; color:#ff0000;}
 
 footer{background-color: #000000; color:#ffffff; height:45px; line-height:45px; position:fixed; padding-left:20px; bottom:0px; width:100%;}
 
