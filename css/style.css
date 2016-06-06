@@ -1,0 +1,26 @@
+*{padding:0px;margin:0px;}
+body{background-color: #ffffff;}
+
+header{background-color: #000000; color:#ffffff; height:75px; line-height:75px; padding-left:20px;}
+#logo{font-size: 30px;}
+#tagline{color:#cccccc;}
+
+
+#container{width:960px; margin:0px auto; text-align: center; background-color: #ffffff; overflow:auto;}
+#content h2{font-size: 60px; color:#ffffff;}
+#content p{font-size: 28px; color: #cccccc;}
+#banner{background-color: #555555; padding:60px 20px; margin-top: 30px;}
+
+button{width:200px; height:30px; margin-top: 15px; font-size: 18px;}
+#bt-play{background-color: green; color:#ffffff;}
+#bt-play:hover{background-color: #1bd252;}
+
+#bt-rules{background-color: #0077ff; color:#ffffff;}
+#bt-rules:hover{background-color: #53a1fa;}
+
+footer{background-color: #000000; color:#ffffff; height:45px; line-height:45px; position:fixed; padding-left:20px; bottom:0px; width:100%;}
+
+
+
+#rule-list-div{padding:30px 10px; color: white; width:480px; margin:0px auto;}
+#rule-list-div ul li{list-style-type:square; font-size:30px; height:30px; line-height:30px; font-family: arial, helvetica, sans-serif; text-align: left;}
