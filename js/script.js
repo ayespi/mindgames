@@ -13,14 +13,20 @@
 var $startGameButton = $("#bt-start");
 var $playingArea = $("#play-area");
 
+var $memoryCard = $(".card img");
+
 var cardImages = ["img1.jpg",
                   "img2.jpg",
                   "img3.jpg",
                   "img4.jpg",
+                  "img5.jpg",
+                  "img6.jpg",
                   "img1.jpg",
                   "img2.jpg",
                   "img3.jpg",
-                  "img4.jpg"];
+                  "img4.jpg",
+                  "img5.jpg",
+                  "img6.jpg"];
 
 var shuffledImages = [];
 var i = 0;
@@ -46,7 +52,7 @@ function buildBoard(){
 
     for (i = 0; i < shuffledImages.length; i += 1){
 
-          outputBoard += "<div class=\"card\"><img src=\"images/"+shuffledImages[i]+"\"></div>";
+          outputBoard += "<div class=\"card\" id=\"card_"+i+"\"><img src=\"images/"+shuffledImages[i]+"\"></div>";
 
           $playingArea.html(outputBoard);
           //console.log(outputBoard);
@@ -74,7 +80,12 @@ $(document).ready(function(){
       $startGameButton.on("click",function(){
 
               buildBoard();
+              var $playingAreaDiv = $("#play-area > div");
+              $(".card img").css("display","none");
 
+              $playingAreaDiv.click(function(){
+                  $(this).toggleClass("showImage");
+                });
 
       });
 

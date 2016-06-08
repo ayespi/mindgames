@@ -6,12 +6,20 @@ header{background-color: #000000; color:#ffffff; height:75px; line-height:75px; 
 #tagline{color:#cccccc;}
 
 
-#container{width:960px; margin:0px auto; text-align: center; background-color: #555555; overflow:auto;}
+#container{width:940px; margin:0px auto; text-align: center; background-color: #555555;
+            padding-bottom: 30px;overflow-x:hidden;}
 #content h2{font-size: 60px; color:#ffffff;}
 #content p{font-size: 28px; color: #cccccc;}
-#banner{background-color: #555555; padding:60px 18px; margin-top: 30px;}
+#banner{background-color: #555555; padding:45px 18px; margin-top: 30px;}
 
-#play-area{width:960px; border:1px solid #555555;}
+
+#play-area{ background-color: #858585; border:1px solid #b1b1b1; width:960px;
+            height:650px; padding:24px; margin:0px auto;}
+
+#play-area > div{background: url(../images/bkgd/mg-bkgd.jpg) no-repeat; border:none;
+            width:200px; height:200px; float:left; margin:10px 10px;}
+
+.showImage img{display:block !important;}
 
 button{width:200px; height:30px; margin-top: 15px; font-size: 18px;}
 #bt-play{background-color: green; color:#ffffff;}
