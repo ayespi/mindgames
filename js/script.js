@@ -1,6 +1,6 @@
 // - Start game
 
-      //>>> BEGIN GAME by clicking START button
+      //>>> BEGIN GAME
 
       //>>> After the START button is clicked, the board will be populated
       //     with cards
@@ -10,44 +10,51 @@
 
 //********** FUNCTIONS **********
 
-function checkForAllMatches(){
+var $startGameButton = $("#bt-start");
+var $playingArea = $("#play-area");
 
-    if(allMatchesFound == true){
+var cardImages = ["img1.jpg",
+                  "img2.jpg",
+                  "img3.jpg",
+                  "img4.jpg",
+                  "img1.jpg",
+                  "img2.jpg",
+                  "img3.jpg",
+                  "img4.jpg"];
 
-        return true;
+var shuffledImages = [];
+var i = 0;
+var $newCardDiv;
+var outputBoard = "";
+// _ Play game until all matches are found (UNTIMED)
 
-    }else{
 
-        return false;
+// - View game grid
+
+function buildBoard(){
+
+    //Add images to cardImage Array
+
+    //To Shuffle images use memoryCardShuffle()
+    //Store Shuffed Images in new shuffledImages Array
+
+          shuffledImages = memoryCardShuffle(cardImages);
+
+    //Deal cards
+    // To deal cards, loop through the shuffledImages array and output
+    //  to the PLAY AREA
+
+    for (i = 0; i < shuffledImages.length; i += 1){
+
+          outputBoard += "<div class=\"card\"><img src=\"images/"+shuffledImages[i]+"\"></div>";
+
+          $playingArea.html(outputBoard);
+          //console.log(outputBoard);
 
     }
 
+
 }
-
-
-var startGameButton = $("#bt-start");
-var playingArea = $("#play-area");
-
-// _ Play game until all matches are found (UNTIMED)
-
-var allMatchesFound;
-var matchesFound;
-var playerMessage;
-
-
-        if(matchesFound){
-
-            playerMessage = "You WIN!!!";
-
-        }
-
-
-
-
-
-// - View game grid (example: 4x2 - 4 columns by 2 rows)
-
-function buildGrid(){};
 
 
 // - Take a turn:
@@ -64,9 +71,10 @@ $(document).ready(function(){
 
 //***** START GAME *****
 
-      startGameButton.on("click",function(){
+      $startGameButton.on("click",function(){
 
-              playingArea.text("Button was CLICKED!!!");
+              buildBoard();
+
 
       });
 
