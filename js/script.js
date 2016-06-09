@@ -29,9 +29,12 @@ var cardImages = ["img1.jpg",
 
 var shuffledImages = [];
 var i = 0;
-var cardsFlipped;
+var cardsFlipped = [];
 var $newCardDiv;
 var outputBoard = "";
+
+var card1;
+var card2;
 // _ Play game until all matches are found (UNTIMED)
 
 
@@ -57,47 +60,23 @@ function buildBoard(){
 
           $playingArea.html(outputBoard);
           //console.log(outputBoard);
-
     }
-
-
 }
-
-
-// - Take a turn:
-//     A) Choose TWO cards consecutively
-//           A card is chosen by clicking the card
-//     B) After the SECOND card is chosen, there will be a designated VIEWING TIME to give the user an opportunity to commit the TWO cards to MEMORY, IN THE EVENT that the TWO card choice DO NOT result in a match.
-//     C) Turns will be taken until ALL MATCHES ARE FOUND
 
 function flipCard(){
-
-    cardsFlipped +=1;
     $(this).toggleClass("showImage");
-    //if cardsflipped == 2, wait for a half second and hideAllCards
-    if(cardsFlipped == 2){
-
-        //wait for a half second and hideAllCards
-        // setTimeout hideAllCards
-        hideAllCards();
-
+    var cardImage = $(this).find("img").attr("src");
+    cardsFlipped.push(cardImage);
+    if(cardsFlipped.length == 3){
+      if(cardsFlipped[0] == cardsFlipped[1] && cardsFlipped.length){
+          $(this).siblings(".showImage").addClass("match");
+      }
+      $(this).siblings(".showImage").removeClass("showImage");
+      cardsFlipped = [cardsFlipped[2]];
     }
-
 }
 
-
-// function hideAllCards(){setTimeout(function(){ $(".card img").css("display","none"); }, 3000);}
-
-function hideAllCards(){setTimeout(function(){ console.log("Thank You Lord!!!");}, 3000);}
-
-// _ End game
-//     A) Finding ALL MATCHES
-//     B) Closing browser window
-
-
 $(document).ready(function(){
-
-//***** START GAME *****
 
       $startGameButton.on("click",function(){
 
@@ -105,12 +84,8 @@ $(document).ready(function(){
               var $playingAreaDiv = $("#play-area > div");
               $(".card img").css("display","none");
 
-
-              var cardsFlipped = 0;
               $playingAreaDiv.click(flipCard);
 
       });
-
-
 
 });

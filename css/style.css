@@ -19,7 +19,7 @@ header{background-color: #000000; color:#ffffff; height:75px; line-height:75px; 
 #play-area > div{background: url(../images/bkgd/mg-bkgd.jpg) no-repeat; border:none;
             width:200px; height:200px; float:left; margin:10px 10px;}
 
-.showImage img{display:block !important;}
+.showImage img, .match img{display:block !important;}
 
 button{width:200px; height:30px; margin-top: 15px; font-size: 18px;}
 #bt-play{background-color: green; color:#ffffff;}
@@ -32,8 +32,6 @@ button{width:200px; height:30px; margin-top: 15px; font-size: 18px;}
 #bt-start:hover{background-color: #ffffff; color:#ff0000;}
 
 footer{background-color: #000000; color:#ffffff; height:45px; line-height:45px; position:fixed; padding-left:20px; bottom:0px; width:100%;}
-
-
 
 #rule-list-div{padding:30px 10px; color: white; width:480px; margin:0px auto;}
 #rule-list-div ul li{list-style-type:square; font-size:30px; height:30px; line-height:30px; font-family: arial, helvetica, sans-serif; text-align: left;}
