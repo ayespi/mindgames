@@ -20,12 +20,24 @@ var cardImages = ["img1.jpg",
                   "img4.jpg",
                   "img5.jpg",
                   "img6.jpg",
+                  "img7.jpg",
+                  "img8.jpg",
+                  "img9.jpg",
+                  "img10.jpg",
+                  "img11.jpg",
+                  "img12.jpg",
                   "img1.jpg",
                   "img2.jpg",
                   "img3.jpg",
                   "img4.jpg",
                   "img5.jpg",
-                  "img6.jpg"];
+                  "img6.jpg",
+                  "img7.jpg",
+                  "img8.jpg",
+                  "img9.jpg",
+                  "img10.jpg",
+                  "img11.jpg",
+                  "img12.jpg"];
 
 var shuffledImages = [];
 var i = 0;
@@ -115,6 +127,7 @@ $(document).ready(function(){
       $startGameButton.on("click",function(){
               $banner.slideUp();
               buildBoard();
+              $("footer").toggleClass("hideFooter");
               var $playingAreaDiv = $("#play-area > div");
               $(".card img").css("display","none");
 

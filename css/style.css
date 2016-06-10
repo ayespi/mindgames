@@ -1,24 +1,27 @@
 *{padding:0px;margin:0px;}
-body{background-color: #ffffff;background-image: url("../images/bkgd/mind-2.jpg");}
+body{background-color: #ffffff;
+  /*background-image: url("../images/bkgd/bkgd-bowling-1800x1350.jpg");background-position:center; */
+}
 
 header{background-color: #000000; color:#ffffff; height:75px; line-height:75px; padding-left:20px;}
 #logo{font-size: 30px;}
 #tagline{color:#cccccc;}
 
 
-#container{width:940px; margin:0px auto; text-align: center; background-color: #555555;
+#container{width:940px; margin:0px auto; text-align: center; background:none;
             padding-bottom: 30px;overflow-x:hidden;}
 #content h2{font-size: 60px; color:#ffffff;}
 #content p{font-size: 28px; color: #cccccc;}
 #banner{background-color: #555555; padding:45px 18px; margin-top: 30px;}
 
 
-#play-area{ background-color: #858585; border:1px solid #b1b1b1; width:960px;
+#play-area{ background:none; width:940px;
             height:650px; padding:24px; margin:0px auto;}
 
-#play-area > div{background: url(../images/bkgd/mg-bkgd.jpg) no-repeat; border:none;
-            width:200px; height:200px; float:left; margin:10px 10px;}
+#play-area > div{background: url(../images/bkgd/mg-bkgd150.jpg) no-repeat; border:none;
+            width:150px; height:150px; float:left; margin:2px 2px;}
 
+.card img{width:150px; height:auto;}
 .showImage img, .match img{display:block !important;}
 
 button{width:200px; height:30px; margin-top: 15px; font-size: 18px;}
@@ -32,6 +35,6 @@ button{width:200px; height:30px; margin-top: 15px; font-size: 18px;}
 #bt-start:hover{background-color: #ffffff; color:#ff0000;}
 
 footer{background-color: #000000; color:#ffffff; height:45px; line-height:45px; position:fixed; padding-left:20px; bottom:0px; width:100%;}
-
+.hideFooter{display: none;}
 #rule-list-div{padding:30px 10px; color: white; width:480px; margin:0px auto;}
 #rule-list-div ul li{list-style-type:square; font-size:30px; height:30px; line-height:30px; font-family: arial, helvetica, sans-serif; text-align: left;}
